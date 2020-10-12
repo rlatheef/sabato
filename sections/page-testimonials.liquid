@@ -1,0 +1,82 @@
+{% include 'page-header' %}
+
+<div class="page-width page-testimonials">
+  <div class="grid">
+    <div class="grid__item medium--one-whole large-up--five-sixths large-up--push-one-twelfth">
+      <div class="grid testimonials">
+        <div class="grid__item testimonial-left-column medium-up--one-half">
+        </div>
+        <div class="grid__item testimonial-right-column medium-up--one-half">
+        </div>
+        {% comment %}
+        The below blocks are placed in the about left/right columns in the theme.js file
+        {% endcomment %}
+        {% for block in section.blocks %}
+        {% if block.settings.testimonial != blank %}
+            <div class="grid__item medium-up--one-half testimonial-wrap">
+              <div class="testimonial-inner">
+                {% include 'icon-quotes' %}
+                <p>{{ block.settings.testimonial }}</p>
+                <div class="meta">
+                  {% if block.settings.avatar != blank %}
+                    <img src="{{ block.settings.avatar | img_url: '300x' }}" alt="Testimonial by {{block.settings.name}} for {{shop.name}}">
+                  {% endif %}
+                  <div class="meta-inner">
+                    {% if block.settings.person != blank %}
+                    <h4>{{ block.settings.person }}</h4>
+                  {% endif %}
+                  {% if block.settings.relationship != blank %}
+                    <p>{{ block.settings.relationship }}</p>
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+        {% endif %}  
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Testimonials Page",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "pageheader_image",
+        "label": "Page Header Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Testimonial",
+        "name": "Testimonial Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "person",
+            "label": "Name"
+          },
+          {
+            "type": "text",
+            "id": "relationship",
+            "label": "Relationship"
+          },
+          {
+            "type": "image_picker",
+            "id": "avatar",
+            "label": "Image",
+            "info": "Optional"
+          },
+          {
+            "type": "richtext",
+            "id": "testimonial",
+            "label": "Testimonial"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

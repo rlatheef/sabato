@@ -1,0 +1,1013 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#69727b",
+    "color_sale_text": "#557b97",
+    "color_button": "#557b97",
+    "color_button_text": "#fff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#fff",
+    "type_header_font": "work_sans_n6",
+    "type_header_base_size": 26,
+    "type_base_font": "poppins_n4",
+    "type_base_size": 16,
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/Sabato-Favicon-2020.jpg",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/NEW_Sabato_Logo_-_cmyk_HR_Clear_Cut_-_no_byline_1.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#ce6f19",
+    "checkout_button_color": "#8b9b3c",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/NEW_Sabato_Logo_-_cmyk_HR_Clear_Cut_-_no_byline_1.png",
+          "logo_max_width": 190,
+          "main_linklist": "main-menu"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Slide-1-Retail-Store_NEW.jpg",
+              "text_position": "center",
+              "slide_title": "Welcome to Sabato",
+              "subheading": "Discover the finest European and New Zealand ingredients for your inner gourmand. We proudly stock the best quality products, sourced from family-owned, multi-generational artisan producers.",
+              "button_label": "SHOP NOW",
+              "button_link": "shopify:\/\/collections"
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero_slide_2.png",
+              "text_position": "center",
+              "slide_title": "Indulge with Valrhona",
+              "subheading": "Known as the ‘Rolls-Royce’ of the chocolate world, Valrhona have been creating exceptional chocolate for eating and cooking since 1922. Embark upon a chocolate journey starting from Dulcey (32%) to Abinao (85%).",
+              "button_label": "SHOP NOW",
+              "button_link": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1"
+        ],
+        "settings": {
+          "show_overlay": false,
+          "message": true,
+          "message_text": "FREE SHIPPING on $150 and above.",
+          "message_link": "",
+          "color_bg": "#ce6f19",
+          "color_text": "#ffffff"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1590383595512": {
+            "type": "store",
+            "settings": {
+              "footer_logo": "shopify:\/\/shop_images\/NEW_Sabato_Logo_-_cmyk_HR_Clear_Cut_-_no_byline_1.png",
+              "phone": "0800 SABATO",
+              "email": "info@sabato.co.nz",
+              "address": "57 Normanby Road, Mt Eden, Auckland",
+              "hours": "Monday to Saturday 9.00am - 5.00pm\n<br>Sunday 10.00am - 5.00pm\n<br>Closed public holidays"
+            }
+          },
+          "link_list": {
+            "type": "link_list",
+            "settings": {
+              "title": "Sabato",
+              "menu": "footer"
+            }
+          },
+          "1590383181757": {
+            "type": "link_list",
+            "settings": {
+              "title": "Information",
+              "menu": "information"
+            }
+          },
+          "1590383191328": {
+            "type": "link_list",
+            "settings": {
+              "title": "My Account",
+              "menu": "my-account"
+            }
+          },
+          "1590383387504": {
+            "type": "link_list",
+            "settings": {
+              "title": "Social",
+              "menu": "social"
+            }
+          }
+        },
+        "block_order": [
+          "1590383595512",
+          "link_list",
+          "1590383181757",
+          "1590383191328",
+          "1590383387504"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "color_footer_bg": "#ffffff",
+          "color_footer_text": "#231f20",
+          "show_locale_selector": true,
+          "show_currency_selector": true
+        }
+      },
+      "1590631764510": {
+        "type": "index-content-blocks",
+        "blocks": {
+          "1590631897771": {
+            "type": "block",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/Bellini-Box-3.jpg",
+              "title": "Gourmet Hampers",
+              "link": "shopify:\/\/collections\/hampers-gift-ideas"
+            }
+          },
+          "1590631883805": {
+            "type": "block",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/Rectangle_34.png",
+              "title": "Spring Selection",
+              "link": "shopify:\/\/blogs\/recipes"
+            }
+          },
+          "1590631919065": {
+            "type": "block",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/orecchiotte-with-white-beans.jpg",
+              "title": "Vegan",
+              "link": "shopify:\/\/blogs\/recipes"
+            }
+          },
+          "1590631932921": {
+            "type": "block",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/quick-cook-polenta.jpg",
+              "title": "Gluten-free",
+              "link": "shopify:\/\/blogs\/recipes"
+            }
+          },
+          "1590631953148": {
+            "type": "block",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/stuffed-courgette-ribbons.jpg",
+              "title": "Organic",
+              "link": "shopify:\/\/blogs\/recipes"
+            }
+          },
+          "1590631773048": {
+            "type": "block",
+            "settings": {
+              "background_image": "shopify:\/\/shop_images\/Rectangle_33.png",
+              "title": "Baking-must-haves",
+              "link": "shopify:\/\/collections\/baking-products"
+            }
+          }
+        },
+        "block_order": [
+          "1590631897771",
+          "1590631883805",
+          "1590631919065",
+          "1590631932921",
+          "1590631953148",
+          "1590631773048"
+        ],
+        "settings": {
+          "text_background": "shopify:\/\/shop_images\/Subtract.png",
+          "title": "Sabato Selections",
+          "text": "Explore our carefully curated range of fine food ingredients and gourmet gifts, through our guided collections. Simply browse by seasonally driven ingredients featuring easy entertaining themes, dietary preferences, or treat someone to the perfect foodie gift."
+        }
+      },
+      "1590723296523": {
+        "type": "feature-row",
+        "settings": {
+          "image_number": "one",
+          "position": "left",
+          "image": "shopify:\/\/shop_images\/Rectangle_31.png",
+          "text_alignment": "center",
+          "title": "Our Recipes",
+          "text": "<p>Over 150 tried and tested delicious recipes, meal ideas and serving suggestions for you to try at home, using our fabulous gourmet ingredients.&nbsp;<\/p>",
+          "button_link": "shopify:\/\/blogs\/recipes",
+          "button_text": "view all",
+          "left_image": "",
+          "right_image": "",
+          "text_alignment_2": "left",
+          "title_2": "",
+          "text_2": "",
+          "button_link_2": "",
+          "button_text_2": ""
+        }
+      },
+      "1590725255233": {
+        "type": "feature-row",
+        "settings": {
+          "image_number": "Two",
+          "position": "left",
+          "image": "",
+          "text_alignment": "left",
+          "title": "",
+          "text": "",
+          "button_link": "",
+          "button_text": "",
+          "left_image": "shopify:\/\/shop_images\/Group_63.png",
+          "right_image": "shopify:\/\/shop_images\/Group_64.png",
+          "text_alignment_2": "center",
+          "title_2": "A little bit about Sabato",
+          "text_2": "<p>Since 1993, Jacqui and Philip Dixon have been sourcing fine foods primarily from Italy, Spain and France. Most suppliers are often family-run businesses who use traditional methods of production to create outstanding products. Jacqui and Philip travel to&nbsp;Europe to source new, interesting products,&nbsp;to check product quality and collect information on upcoming trends.<br><br>As a result, Sabato has been the first to introduce many key products to New Zealand foodies. Outstanding products,&nbsp;such as La Chinata smoked paprika, Calogiuri Vincotto, El Navarrico piquillo pimientos and Valrhona chocolate, to name but a few.&nbsp;They continue to enjoy making exciting new additions to the Sabato range.<\/p>",
+          "button_link_2": "shopify:\/\/pages\/about-us",
+          "button_text_2": "Discover more"
+        }
+      },
+      "1591051216728": {
+        "type": "index-featured-products",
+        "settings": {
+          "title": "Featured Products",
+          "link_text": "View All",
+          "link": "shopify:\/\/collections\/all",
+          "carousel_collection": "test",
+          "max_products": 8
+        }
+      },
+      "1591057122744": {
+        "type": "featured-blog",
+        "disabled": true,
+        "settings": {
+          "title": "Travel Tales...",
+          "blog": "food-blogs",
+          "max_posts": 8,
+          "link_text": "View All",
+          "link": "shopify:\/\/blogs\/news"
+        }
+      },
+      "page-about": {
+        "type": "page-about",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/Rectangle_31_8aa053e6-5eb9-401e-8af7-7648084122ef.png",
+          "staff_title": "",
+          "quote_image": "shopify:\/\/shop_images\/Jacqui-and-Phil-Dish-2019-_1_1.png",
+          "quote": "<p><strong>\"We started Sabato together in 1993 and to this day enjoy sourcing a wide range of fine quality, often unique ingredients from Europe. We also offer our own range of&nbsp;ingredients made in-house and stock other specially selected New Zealand products.&rdquo;&nbsp;&nbsp;<\/strong>- Jacqui &amp; Phil Dixon<\/p>"
+        }
+      },
+      "page-contact": {
+        "type": "page-contact",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/Rectangle_31_be5079f5-fe4c-490a-8ac1-f6d082312da8.png",
+          "map": true,
+          "form_title": "Send Us a Message",
+          "form_subtitle": "We would love to hear from you!",
+          "phone": "0800 SABATO",
+          "email": "info@sabato.co.nz",
+          "address": "57 Normanby Road, Mt Eden, Auckland",
+          "hours": "Monday to Saturday 9.00am - 5.00pm    |    Sunday 10.00am - 5.00pm<br>Closed public holidays",
+          "facebook": "https:\/\/www.facebook.com\/sabato.nz\/",
+          "instagram": "https:\/\/www.instagram.com\/sabatonz\/?hl=en"
+        }
+      },
+      "page-testimonials": {
+        "type": "page-testimonials",
+        "blocks": {
+          "1591154339065": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Judith Tabron",
+              "relationship": "Restaurant legend & co-host of television series, My Restaurant Rules.",
+              "avatar": "",
+              "testimonial": "<p>I always make large bowls of salad dressing in the summer using <strong>Forvm Chardonnay vinegar<\/strong>. My favourite combination uses a heaped tablespoon of Dijon mustard, a chopped large garlic clove, a sprinkle of chilli flakes and a ratio of half <strong>Forvm Chardonnay vinegar<\/strong>&nbsp;to half fruity extra virgin olive oil such as <strong>Colonna<\/strong> or <strong>Salvagno<\/strong>. For a fabulous citrus flavour, I use <strong>Colonna lemon-infused extra virgin olive oil<\/strong> &ndash; fabulous with seafood.<\/p>"
+            }
+          },
+          "1596494925310": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Alex C",
+              "relationship": "Customer",
+              "avatar": "",
+              "testimonial": "<p>Just wanted to send you a note to say a big &ldquo;Thank you&rdquo; for the wonderful hamper you put together for our friend. You did a great job.<\/p>\n<p>It looked fabulous and she was absolutely thrilled and can&rsquo;t wait use the &ldquo;yummy&rdquo; products inside.<\/p>\n<p>I knew I had made the right choice by choosing Sabato, your products, presentation and customer service are first class.<\/p>"
+            }
+          },
+          "1596495114102": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Kjesten A",
+              "relationship": "Customer",
+              "avatar": "",
+              "testimonial": "<p>I visit Sabato almost weekly and enjoy their fantastic products and service. The staff is very friendly and knowledgeable. I love the way I am offered a coffee when I arrive and it is such a great coffee too.<\/p>"
+            }
+          },
+          "1591154375435": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Andrew Hanson",
+              "relationship": "Executive Chef – Amano",
+              "avatar": "",
+              "testimonial": "<p>I first used <strong>Pons sherry vinegar<\/strong> (formerly Romulo) about 11 years ago and it quickly became a favourite ingredient to work with. At Amano, we use this vinegar a lot as it is rich, slightly sweet and obviously acidic but not overpoweringly so.&nbsp;<\/p>\n<p>- Deglaze a pan with a little sherry vinegar after cooking meat or chicken. Add some stock and aromatics, reduce a little to make a pan sauce.&nbsp;<\/p>\n<p>- It's great with vegetables and can be used to enhance the flavour of roast beetroot for example, or even to toss through a bowl of fresh tomatoes with black pepper, salt and olive oil when the tomatoes are at their peak.&nbsp;<\/p>\n<p>- It also makes a terrific vinaigrette which can be used to season chicken, lamb or pork hot off the grill.&nbsp;&nbsp;<\/p>"
+            }
+          },
+          "1591154397937": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Gavin Doyle",
+              "relationship": "Head Chef – Soul Bar",
+              "avatar": "",
+              "testimonial": "<p>I was first introduced to Sabato be Des Harris back at Clooney. We used many Sabato products &ndash; like their flavoured oils and vinegars. These were all excellent products and have now become a staple in the kitchen at Soul Bar. My favourite product from Sabato right now is <strong>farro<\/strong>. It has been harvested from the hills of Umbria, Italy. You can actually taste the freshness. So much behind the scenes work is created to maximise the taste.<\/p>\n<p>- These nutrient dense grains are so versatile. I've often used farro in soups, salads and risottos. They have a&nbsp; chewy texture when cooked and taste slightly nutty.&nbsp;<\/p>\n<p>- Another plus from the grain is that it has great health benefits, which also makes it a clear favourite of mine.&nbsp;<\/p>\n<p>Apart from the superior quality products Sabato provides, the service is unquestionable. I have had the same delivery driver Griff for the last 8 eight years. He rocks, and is always happy to help!<\/p>"
+            }
+          },
+          "1591154418212": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Tom Hishon",
+              "relationship": "Head Chef & Co-owner – Orphans Kitchen",
+              "avatar": "",
+              "testimonial": "<p>My favourite Sabato ingredient for summer would have to be <strong>Ortiz anchovies<\/strong>, I like to blitz a couple up with fresh lemon juice, extra virgin olive oil and garlic. Brush half a cos head with a little extra virgin olive oil and heat a griddle pan over a high heat. When hot, place the cos head on the pan and char. Remove from heat, place on a serving dish and then pour the dressing over liberally. Garnish with a few whole anchovies, lemon zest and juice to finish.&nbsp;<\/p>"
+            }
+          },
+          "1591154440092": {
+            "type": "Testimonial",
+            "settings": {
+              "person": "Mark Sycamore",
+              "relationship": "Executive Chef – Blanket Bay",
+              "avatar": "",
+              "testimonial": "<p>You would think the task of naming your three favourite Sabato ingredients would be an easy one. Despite the fact that I have been using their products for over 20 years now I couldn't get my shortlist any smaller than seven items!<\/p>\n<p><strong>Ferron carnaroli rice<\/strong> cannot be beaten for its 'nuttiness' and the ability to hold its shape. The texture of the larger grain means it is suitable for anything from&nbsp;a simple risotto embellished with fresh NZ truffles through to a very textural version such as my current favourite combination of Milford Sound crayfish, celeriac and Sabato Julie Le Clerc preserved lemon.&nbsp;<\/p>\n<p>The very first product I remember using from the Sabato range was <strong>El Navarrico piquillo peppers<\/strong>. The depth of flavour simply cannot be replicated and they make a great addition to platters but can also be used in salsas. They are fantastic blended with <strong>Forvm vinegar<\/strong> and olive oil for a dressing to serve over salads or fish. I think one of the best ways to appreciate their flavour is some char-grilled sourdough spread with goats' cheese and peppers.&nbsp;<\/p>\n<p>I really struggled to decide on my last ingredient, possibly the <strong>Giusti balsamic vinegars<\/strong>, or the crunchy <strong>Losada Gordal olives<\/strong> but in the end it would have to be the <strong>Pons salted capers<\/strong>. The flavour and texture of these little bursts of goodness are far superior to the brined jars adorning supermarket shelves. Stir them whole through a mayonnaise with some crunchy cornichons, chevril, parsley and tarragon for a great tartare sauce to serve with fish.&nbsp;<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1591154339065",
+          "1596494925310",
+          "1596495114102",
+          "1591154375435",
+          "1591154397937",
+          "1591154418212",
+          "1591154440092"
+        ],
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/Rectangle_31_3074b9a3-2b6c-4cb2-887f-a234eb0f71c3.png"
+        }
+      },
+      "page-join-our-team": {
+        "type": "page-join-our-team",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/join-the-sabato-team.jpg",
+          "page_intro": "<p>We are interested in employing people who are enthusiastic, hard working, energetic and passionate about good food. From time to time we require new people to join the Sabato team and will post details of positions available below.<br> <br>To apply for any of the roles listed take the time to produce a cover letter that reflects who you are and why you want the position. Attach your CV and email it to <strong><a href=\"mailto:bradley.spratt@sabato.co.nz?subject=Application%20for%20Employment\">bradley.spratt@sabato.co.nz<\/a>.<\/strong><\/p>"
+        }
+      },
+      "blog-template-news": {
+        "type": "blog-template-news",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/Rectangle_31_4fcd1389-6785-4290-b96d-a35be3e6a270.png",
+          "blog_intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, purus imperdiet tellus facilisi varius ac neque. Eros augue pretium felis, mi molestie sollicitudin. Mauris lacus tincidunt natoque tellus aliquam et ut mollis dui. A viverra convallis sodales quis libero. Vitae pellentesque ut mauris, felis purus eu pretium ultricies viverra. Consequat, duis gravida commodo ut viverra habitasse.<\/p>",
+          "blog_show_author": false,
+          "blog_show_date": true
+        }
+      },
+      "blog-template-recipes": {
+        "type": "blog-template-recipes",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/spanish-caesar-salad.jpg",
+          "blog_intro": "<p>Delicious recipes, meal ideas and serving suggestions for you to try at home, using gourmet ingredients from Sabato.&nbsp; Available online and at our&nbsp;<a href=\"\/pages\/contact-us\" title=\"Contact\">Mt. Eden fine food, retail store<\/a>&nbsp;7 days a week.&nbsp;<\/p>",
+          "blog_show_author": false,
+          "blog_show_date": false
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "show_share_buttons": true
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_collection_header": true
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_share_buttons": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like...",
+          "show_vendor": false
+        }
+      },
+      "page-rewards": {
+        "type": "page-rewards",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/cake.png",
+          "page_title": "Sabato Customer Rewards",
+          "page_intro": "<p>Join our customer rewards programme to earn rewards and be the first to hear about delicious new products, special offers and exclusive events!<br>By registering below you will be eligible to earn rewards points. For every dollar you spend with us, either in-store or online you will earn reward points ($1 = 1 point). You will receive a $10 reward for every $200 you spend. <br><br>Buon appetito! <br><br>Jacqui &amp; Philip Dixon<\/p>",
+          "rewards_icon": "shopify:\/\/shop_images\/Group_72.png",
+          "icon_caption_1": "$10 reward for every $200 you spend",
+          "rewards_icon_2": "",
+          "icon_caption_2": "",
+          "page_content": "<p><strong>Please note:<\/strong> Registering for our website does not automatically sign you up for a Sabato customer account - you must sign up using the form below. When you have signed up you will be added to our customer card database, and you will then automatically gain loyalty points with any orders both online or instore. There is no need to enter your customer card number with online orders - we will find your account using your name. However, if you do wish to add your customer card number please use the comments box when completing your order.<\/p>",
+          "form_heading": "Sign Up for a Sabato Customer Account",
+          "terms_and_conditions": "<p><strong>SABATO CUSTOMER REWARDS PROGRAMME - TERMS AND CONDITIONS<\/strong>&nbsp;<br><br>&bull; You will receive $10 in rewards for every 200 points accumulated. Rewards will accumulate on your customer account at the end of each day in denominations of $10 and can only be redeemed in full $10 increments. <br><br>&bull; Accounts will be active 5 days from registration. Points can only be accumulated after this time <br><br>&bull; You can collect points and redeem rewards whether you have your Customer Card with you or not, however you must identify yourself as a member before the transaction is complete. <br><br>&bull; Points and rewards cannot be sold or transferred. <br><br>&bull; Points will be accumulated for purchasing gift vouchers; but will not be accumulated for gift voucher redemptions.<br> <br>&bull; Points do not have any value until they are converted into rewards and cannot be redeemed for cash or gift vouchers. <br><br>&bull; You will receive an email notification when you are due a reward voucher; please keep your email address information up to date. <br><br>&bull; If you wish to use a reward voucher for an online purchase please note this in the comments section when placing your order. Reward vouchers can be used for online purchases, however gift vouchers can only be redeemed in-store and if lost are not replaceable. <br><br>&bull; We will use your contact details from the application form to contact you by e-mail or post with information about Sabato and our products, unless you request otherwise. We will not pass your details to any other company, organisation or any other third party. <br><br>&bull; We reserve the right to change the terms and conditions relating to the Sabato Rewards Programme at any time. <br><br>&bull; This Customer Rewards Programme does not apply to trade accounts.<\/p>"
+        }
+      },
+      "page-trade": {
+        "type": "page-trade",
+        "settings": {
+          "pageheader_image": "shopify:\/\/shop_images\/Rectangle_31_4fcd1389-6785-4290-b96d-a35be3e6a270.png",
+          "form_heading": "Sign Up for a Sabato Trade Account",
+          "trade_information": "<p><strong>Food Service &amp; Distribution<\/strong><\/p>\n<p>Sabato source and supply a range of premium ingredients to numerous restaurants, distributors and food manufacturers throughout New Zealand. Our focus is on the fabulous Italian, Spanish and French lines we import; however we also carry a carefully selected local range of cheese and dry goods. If you're interested in becoming a trade customer, please fill in the form on your right and one of our team will be in touch.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>Retailers &amp; Supermarkets<\/strong><\/p>\n<p>Sabato proudly supply both our exclusively imported ranges and locally made products to many independent retailers and select supermarkets around the country. We love being able to share Sabato products with other passionate foodies! If you are a retailer and would like to add Sabato to your range please contact us to open an account. Or if you are a Foodstuffs member interested in becoming a customer please contact&nbsp;us with your store number so we can set you up with an account.&nbsp;<\/p>\n<p>&nbsp;<\/p>\n<p><strong>Provedores<\/strong><\/p>\n<p>Sabato&rsquo;s extensive range of products from Europe and our curated selection of food items from New Zealand means we have everything you need! Brands such as Forvm vinegar, Ortiz anchovies and Valrhona chocolate are essentials for any chef on a yacht or cruise ship. Sabato also supply some of the best quality cured meats from Spain and Italy and notable cheeses from New Zealand and around the world. Please contact us for further information.<\/p>\n<p><\/p>\n<p><strong>Please note that pricing on our website is<\/strong><strong>&nbsp;retail pricing. Please contact us either by email as above or on 09 630 8751 for trade pricing and to set up an account.<\/strong><\/p>"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "1594847914910": {
+            "type": "collection",
+            "settings": {
+              "collection": "baking-products"
+            }
+          },
+          "1594847882494": {
+            "type": "collection",
+            "settings": {
+              "collection": "biscuits-pastries"
+            }
+          },
+          "1594847926772": {
+            "type": "collection",
+            "settings": {
+              "collection": "charcuterie-pate"
+            }
+          },
+          "1594847936729": {
+            "type": "collection",
+            "settings": {
+              "collection": "cheese"
+            }
+          },
+          "1594843181309": {
+            "type": "collection",
+            "settings": {
+              "collection": "chocolate"
+            }
+          },
+          "1594842712837": {
+            "type": "collection",
+            "settings": {
+              "collection": "coffee-tea-beverages"
+            }
+          },
+          "1594842797633": {
+            "type": "collection",
+            "settings": {
+              "collection": "condiments-dressings"
+            }
+          },
+          "1594842822548": {
+            "type": "collection",
+            "settings": {
+              "collection": "confectionery"
+            }
+          },
+          "1594848020034": {
+            "type": "collection",
+            "settings": {
+              "collection": "cookware-kitchenware"
+            }
+          },
+          "1594842782849": {
+            "type": "collection",
+            "settings": {
+              "collection": "crackers-bread"
+            }
+          },
+          "1594842758170": {
+            "type": "collection",
+            "settings": {
+              "collection": "dairy"
+            }
+          },
+          "1594847864735": {
+            "type": "collection",
+            "settings": {
+              "collection": "fish-products"
+            }
+          },
+          "1594847846315": {
+            "type": "collection",
+            "settings": {
+              "collection": "fruit-preserved-dried"
+            }
+          },
+          "1594848007684": {
+            "type": "collection",
+            "settings": {
+              "collection": "gift-vouchers"
+            }
+          },
+          "1594847998312": {
+            "type": "collection",
+            "settings": {
+              "collection": "gourmet-frozen-meals-from-our-kitchen"
+            }
+          },
+          "1594847989057": {
+            "type": "collection",
+            "settings": {
+              "collection": "hampers-gift-ideas"
+            }
+          },
+          "1594842771863": {
+            "type": "collection",
+            "settings": {
+              "collection": "jam-honey-syrups"
+            }
+          },
+          "1594857756430": {
+            "type": "collection",
+            "settings": {
+              "collection": "meat-poultry"
+            }
+          },
+          "1594843060408": {
+            "type": "collection",
+            "settings": {
+              "collection": "mushroom-truffle-products"
+            }
+          },
+          "1594842844988": {
+            "type": "collection",
+            "settings": {
+              "collection": "nuts"
+            }
+          },
+          "1594847981225": {
+            "type": "collection",
+            "settings": {
+              "collection": "oils"
+            }
+          },
+          "1594843031003": {
+            "type": "collection",
+            "settings": {
+              "collection": "olives"
+            }
+          },
+          "1594847891670": {
+            "type": "collection",
+            "settings": {
+              "collection": "pasta-gnocchi"
+            }
+          },
+          "1594843050493": {
+            "type": "collection",
+            "settings": {
+              "collection": "pestos-pastes-sauces"
+            }
+          },
+          "1594842838318": {
+            "type": "collection",
+            "settings": {
+              "collection": "recipe-books"
+            }
+          },
+          "1594843169660": {
+            "type": "collection",
+            "settings": {
+              "collection": "rice-grains-pulses"
+            }
+          },
+          "1594842809212": {
+            "type": "collection",
+            "settings": {
+              "collection": "serving-table-top"
+            }
+          },
+          "1594843042783": {
+            "type": "collection",
+            "settings": {
+              "collection": "spices-seasonings"
+            }
+          },
+          "1594843024498": {
+            "type": "collection",
+            "settings": {
+              "collection": "vegetables"
+            }
+          },
+          "1594843010599": {
+            "type": "collection",
+            "settings": {
+              "collection": "vinegar-vincotto-verjuice"
+            }
+          },
+          "1594847947993": {
+            "type": "collection",
+            "settings": {
+              "collection": "wine-cider"
+            }
+          }
+        },
+        "block_order": [
+          "1594847914910",
+          "1594847882494",
+          "1594847926772",
+          "1594847936729",
+          "1594843181309",
+          "1594842712837",
+          "1594842797633",
+          "1594842822548",
+          "1594848020034",
+          "1594842782849",
+          "1594842758170",
+          "1594847864735",
+          "1594847846315",
+          "1594848007684",
+          "1594847998312",
+          "1594847989057",
+          "1594842771863",
+          "1594857756430",
+          "1594843060408",
+          "1594842844988",
+          "1594847981225",
+          "1594843031003",
+          "1594847891670",
+          "1594843050493",
+          "1594842838318",
+          "1594843169660",
+          "1594842809212",
+          "1594843042783",
+          "1594843024498",
+          "1594843010599",
+          "1594847947993"
+        ],
+        "settings": {
+          "display_type": "selected",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "1590631764510",
+      "1590723296523",
+      "1591051216728",
+      "1590725255233",
+      "1591057122744"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": ""
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {}
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

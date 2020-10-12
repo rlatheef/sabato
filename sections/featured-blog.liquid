@@ -1,0 +1,104 @@
+<div class="featured-blog-wrap page-width-full-mobile">
+  {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title | escape }}</h2>
+    <div class="text-link-wrap">
+      <a class="text_btn" href="{{ section.settings.link }}">{{ section.settings.link_text }}</a>
+    </div>
+  {% endif %}
+
+  {%- assign blog = blogs[section.settings.blog] -%}
+
+    <div class="grid--blog">
+      {% for article in blog.articles limit: section.settings.max_posts %}
+        <div class="blog-card">
+          <a href="{{ article.url }}" class="article__link">
+            {% if article.image %}
+              {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+              {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+              {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                <div class="article__grid-image-container">
+                  <img id="{{ img_id }}"
+                      class="article__grid-image lazyload"
+                      src="{{ article.image | img_url: '300x300' }}"
+                      data-src="{{ img_url }}"
+                      data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                      data-aspectratio="{{ article.image.aspect_ratio }}"
+                      data-sizes="auto"
+                      alt="">
+                  <img class="subtract" src="{{ 'Subtract.png'| asset_img_url: 'large' }}">
+                  <div class="overlay"></div>
+                </div>
+            {% endif %}
+          </a>
+
+          <div class="article__grid-meta">
+
+            <p class="article__title">
+              {{ article.title }}
+            </p>
+
+            <div class="rte article__grid-excerpt">
+              {% if article.excerpt.size > 0 %}
+                {{ article.excerpt }}
+              {% else %}
+                {{ article.content | strip_html | truncate: 100 }}
+              {% endif %}
+            </div>
+
+            <span class="article__date">
+              {{ article.published_at | time_tag: format: 'date' }}
+            </span>
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Blog posts",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Blog posts"
+    },
+    {
+      "id": "blog",
+      "type": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "range",
+      "min": 6,
+      "max": 12,
+      "step": 1,
+      "label": "How many posts shown?",
+      "id": "max_posts",
+      "default": 8
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog posts",
+      "category": "Blog"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,179 @@
+{% if section.settings.image_number == 'one' %}
+  <div class="about-image-text-wrap {{ section.settings.position }} page-width-wide">
+    <div class="about-image">
+      <img src="{{ section.settings.image | img_url: '1024x' }}" alt="{{ section.settings.title }}">
+    </div>
+    <div class="about-text {{ section.settings.text_alignment }}">
+      {% include 'heading-topper' %}
+      <h2 class="about-text-title">{{ section.settings.title }}</h2>
+      {{ section.settings.text }}
+      {% if section.settings.button_link %}
+        <a class="btn" href={{ section.settings.button_link }}>{{ section.settings.button_text}}</a>
+      {% endif %}
+    </div>
+  </div>
+{% else %}
+<div class="image-text-double-wrap page-width-wide">
+  <div class="about-image-text-wrap-double">
+    <div class="image-left-wrap">
+      <img src="{{ section.settings.left_image | img_url: '800x'}}" alt="{{ section.settings.title_2 }}">
+    </div>
+    <div class="about-text-double">
+      {% include 'heading-topper' %}
+      <h2 class="about-text-title">{{ section.settings.title_2 }}</h2>
+      {{ section.settings.text_2 }}
+      {% if section.settings.button_link_2 %}
+        <a class="btn" href={{ section.settings.button_link_2 }}>{{ section.settings.button_text_2 }}</a>
+      {% endif %}
+    </div>
+    <div class="image-right-wrap">
+      <img src="{{ section.settings.right_image | img_url: '800x'}}" alt="{{ section.settings.title_2 }}">
+    </div>
+  </div>
+  {% include 'body-line' %}
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Image and Text Block",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "image_number",
+        "label": "Image number",
+        "info": "Display one image or two images with text",
+        "options": [
+          { 
+            "value": "one",
+            "label": "One"
+          },
+          {
+            "value": "Two",
+            "label": "Two"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "One Image"
+      },
+      { 
+        "type": "select",
+        "id": "position",
+        "label": "Image Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "header",
+        "content": "Two Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "Right Image"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment_2",
+        "label": "Text Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "title_2",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text_2",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link_2",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text_2",
+        "label": "Button Text"
+      }
+    ],
+    "presets": [
+      {
+        "name": {
+          "en": "Feature Row"
+        },
+        "category": {
+          "en": "Zyber"
+        }
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,81 @@
+{% include 'page-header' %}
+
+<div class="page-width page-about">
+  <div class="grid">
+    <div class="grid__item medium--two-thirds large-up--one-half large-up--push-one-quarter medium--push-one-sixth">
+      <div class="rte">
+        {{ page.content }}
+        <div class="quote-section">
+          <img src="{{ section.settings.quote_image | img_url: '800x' }}">
+          <p>{{ section.settings.quote }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid staff-members-wrap">
+    <h2>{{ section.settings.staff_title }}</h2>
+    <div class="blocks">
+      {% for block in section.blocks %}
+      <div class="grid__item large-up--one-quarter medium--one-third small--one-half">
+        <img src="{{ block.settings.image | img_url: '600x'}}" alt="{{ shop.name }} - {{ block.settings.name }}">
+        <div class="meta">
+          <h4>{{ block.settings.name }}</h4>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Us Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "pageheader_image",
+      "label": "Page Header Image"
+    },
+    {
+      "type": "text",
+      "id": "staff_title",
+      "label": "Staff Section Title",
+      "default": "Our Team"
+    },
+    {
+      "type": "image_picker",
+      "id": "quote_image",
+      "label": "Quote Image"
+    },
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "Quote"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "staff",
+      "name": "Staff Member Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Staff Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Staff Member Name"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Staff Description"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

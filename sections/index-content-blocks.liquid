@@ -1,0 +1,97 @@
+<div class="page-width featured-blocks">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+      {% if section.settings.text != blank %}
+        <p>{{ section.settings.text }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="collection-grid">
+    <div class="featured-blocks-grid grid">
+      {% for block in section.blocks %}
+        <div class="featured-block-wrap grid__item small--one-half medium-up--one-third">
+          <div class="featured-block-inner">
+            <a href="{{ block.settings.link }}">
+            <img src="{{block.settings.background_image | img_url: '800x'}}">
+            <div class="text-wrap">
+              {% include 'subtract' %}
+              <h4>{{ block.settings.title }}</h4>
+            </div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+  </div>
+
+  <div class="featured-blocks-btn">
+    <a class="btn" href="/collections">View All</a>
+  </div>
+  
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Content Blocks",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "text_background",
+      "label": "PNG background for title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Background Image",
+          "id": "background_image"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+
+        {
+          "type": "url",
+          "label": "Link",
+          "info": "Page/Collection/Product the block will link to",
+          "id": "link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Content Blocks"
+      },
+      "category": {
+        "en": "Zyber"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,110 @@
+{% paginate search.results by 10 %}
+
+<div class="page-width">
+  {% if search.performed == false %}
+    <div class="text-center">
+      <h1 class="h2">{{ 'general.search.title' | t }}</h1>
+  {% else %}
+    <div class="text-center">
+      <h1 class="h2">
+        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+      </h1>
+  {% endif %}
+      <div class="search-input">
+          {% if search.performed and search.results_count == 0 %}
+            <div class="rte search--no-results-found">
+              <p>{{ 'general.search.no_results' | t }}</p>
+            </div>
+          {% endif %}
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search-form search-page-form">
+            <div class="input-group input-group--nowrap">
+              <div class="input-group__field input-group__field--connected search-form__input-wrapper">
+                <input
+                  type="search"
+                  name="q"
+                  value="{{ search.terms | escape }}"
+                  placeholder="{{ 'general.search.placeholder' | t }}"
+                  role="combobox"
+                  aria-autocomplete="list"
+                  aria-owns="predictive-search-results"
+                  aria-expanded="false"
+                  aria-label="{{ 'general.search.placeholder' | t }}"
+                  aria-haspopup="listbox"
+                  class="search-form__input"
+                  data-search-page-predictive-search-input
+                />
+
+                <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+
+                <button type="reset" class="search-form__clear-action" aria-label="{{ 'general.search.clear_search_term' | t }}" data-search-page-predictive-search-clear>
+                  {% include 'icon-close' %}
+                </button>
+
+                <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
+              </div>
+
+              <button type="submit" class="search-form__connected-submit" aria-label="{{ 'general.search.submit' | t }}" data-search-page-predictive-search-submit>
+                {% include 'icon-search' %}
+              </button>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+{% if search.performed %}
+  <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
+  <div class="page-width collection-product-wrap search-items-wrap">
+    <div class="collection-grid">
+      {% for item in search.results %}
+       {% if item.object_type == 'product' or item.object_type == 'article' %}
+        {% if item.object_type == 'product' %}
+        <div class="product-card-outer">
+          <div class="product-card-wrap">
+            {% include 'product-card-grid', product: item, max_height: 345 %}
+          </div>
+        </div>
+        {% elsif item.object_type == 'article' %}
+          <div class="product-card-outer product-card--grid">
+            <a href="{{ item.url }}">
+              <span class="visually-hidden">{{ item.title }}</span>
+              <div class="grid-view-item__link grid-view-item__image-container">
+                <div class="product-card__image-with-placeholder-wrapper">
+                  <div class="grid-view-item__image-wrapper product-card__image-wrapper js">
+                    {% unless item.image == null %}
+                    <div style="padding-top:{% unless preview_image == blank %}{{ 1 | divided_by: preview_image.aspect_ratio | times: 100 }}%{% else %}100%{% endunless %};">
+                      <img class="grid-view-item__image lazyload" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
+                    </div>
+                    {% endunless %}
+                  </div>
+                </div>
+
+                <div class="product-meta">
+                  <div class="grid-view-item__title" aria-hidden="true">
+                    <span class="product-card__title">{{ item.title }}</span>
+                  </div>
+                  <div>
+                    {% if item.published_at %}{{ item.published_at | date: format: "date" }}{% endif %}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+  {%- if paginate.pages > 1 -%}
+    {% include 'pagination', paginate: paginate %}
+  {%- endif -%}
+{% endif %}
+
+{% if search.results_count < 1  %}
+  <div class="search--less-than-2-results"></div>
+{% endif %}
+
+{% endpaginate %}

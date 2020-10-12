@@ -1,0 +1,83 @@
+{% include 'page-header' %}
+
+<div class="page-width page-join-our-team">
+  <div class="grid">
+    <div class="grid__item large-up--five-sixths large-up--push-one-twelfth medium--one-whole">
+      {% if section.settings.page_intro != blank %}
+        <div class="page-intro">
+          <p>{{ section.settings.page_intro }}</p>
+        </div>
+      {% endif %}
+      <div class="blocks-wrap">
+        {% for block in section.blocks %}
+          <div class="block-wrap">
+            <div class="block-inner">
+              {% if block.settings.image != blank %}
+                <div class="image-container" style="background-image: url({{ block.settings.image | img_url: '800x' }});">
+                  <img class="subtract" src="{{ 'Subtract.png'| asset_img_url: 'large' }}">
+                </div>
+              {% endif %}
+              <div class="job-info">
+                {% if block.settings.title != blank %}
+                  <h4>{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.description != blank %}
+                  <p>{{ block.settings.description }}</p>
+                {% endif %}
+                {% if block.settings.link != blank %}
+                  <a class="text_btn" href="{{ block.settings.link }}">Find Out More</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Join Our Team Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "pageheader_image",
+      "label": "Page Header Image"
+    },
+    {
+      "type": "richtext",
+      "id": "page_intro",
+      "label": "Page Introduction"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Job",
+      "name": "Job Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Job Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Job Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Job Description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Job Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

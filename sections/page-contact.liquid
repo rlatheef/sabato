@@ -1,0 +1,140 @@
+{% include 'page-header' %}
+
+<div class="page-width page-contact">
+  <div class="grid">
+    <div class="grid__item medium-up--one-half left">
+      {% if section.settings.map %}
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.9096172824256!2d174.7622105156594!3d-36.86858217993449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47db030e81e7%3A0xd4f0be1b87381e08!2sSabato!5e0!3m2!1sen!2snz!4v1591151540849!5m2!1sen!2snz" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      {% endif %}
+      <h3>Contact Details</h3>
+      {% if section.settings.phone != blank %}
+        <p class="contact-phone"><span>{% include 'icon-phone' %}</span>{{ section.settings.phone }}</p>
+      {% endif %}
+      {% if section.settings.email != blank %}
+        <p class="contact-email"><span>{% include 'icon-email' %}</span>{{ section.settings.email }}</p>
+      {% endif %}
+      {% if section.settings.address != blank %}
+        <p class="contact-address"><span>{% include 'icon-address' %}</span>{{ section.settings.address }}</p>
+      {% endif %}
+      {% if section.settings.hours != blank %}
+        <p class="contact-hours">{{ section.settings.hours }}</p>
+      {% endif %}
+      <p>      
+        {% if section.settings.facebook != blank %}
+          <a href="{{ section.settings.facebook }}" target="_blank">{% include 'icon-facebook' %}Facebook</a><span class="seperator">|</span>
+        {% endif %}
+        {% if section.settings.instagram != blank %}
+          <a href="{{ section.settings.instagram }}" target="_blank">{% include 'icon-instagram' %}Instagram</a>
+        {% endif %}
+      </p>
+    </div>
+    <div class="grid__item medium-up--one-half right">
+      <div class="contact-form form-vertical">
+        <h3>{{ section.settings.form_title }}</h3>
+        <p>{{ section.settings.form_subtitle }}</p>
+        {%- assign formId = 'ContactForm' -%}
+        {% form 'contact', id: formId %}
+          {% include 'form-status', form: form, form_id: formId %}
+
+          <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+          <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+          
+          <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="{{ formId }}-email"
+            name="contact[email]"
+            autocorrect="off"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {%- if form.errors contains 'email' -%}
+              class="input--error"
+              aria-invalid="true"
+              aria-describedby="{{ formId }}-email-error"
+            {%- endif -%}
+            >
+          {%- if form.errors contains 'email' -%}
+            <span id="{{ formId}}-email-error" class="input-error-message">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% include 'icon-error' %}
+              <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+            </span>
+          {%- endif -%}
+
+          <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel" id="{{ formId }}-phone" name="contact[{{ 'contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+
+          <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
+          <textarea rows="8" id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+          <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
+
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Us Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "pageheader_image",
+      "label": "Page Header Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "map",
+      "label": "Show map?",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Contact form heading"
+    },
+    {
+      "type": "text",
+      "id": "form_subtitle",
+      "label": "Contact form subheader"
+    },
+    {
+      "type": "header",
+      "content": "Contact Details"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Store Phone"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Store Email"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Store Address"
+    },
+    {
+      "type": "text",
+      "id": "hours",
+      "label": "Store Hours"
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Store Facebook"
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Store Instagram"
+    }
+  ]
+}
+{% endschema %}

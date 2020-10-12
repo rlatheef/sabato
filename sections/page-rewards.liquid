@@ -1,0 +1,187 @@
+{% include 'page-header' %}
+
+<div class="page-width rewards-page">
+  <div class="grid">
+    <div class="grid__item large-up--seven-twelfths large-up--push-three-twelfths medium--three-quarters medium--push-one-eighth">
+      <h2>{{ section.settings.page_title }}</h2>
+      <div class="rewards-introduction">
+        <div class="left">
+          {% if section.settings.page_intro != blank %}
+            {{ section.settings.page_intro }}
+          {% endif %}
+        </div>
+        {% if section.settings.rewards_icon != blank or section.settings.rewards_icon_2 != blank %}
+        <div class="right">
+          {% if section.settings.rewards_icon != blank %}
+            <img src="{{ section.settings.rewards_icon | img_url: '400x' }}" alt="{{ section.settings.page_title }}">
+            {% if section.settings.icon_caption_1 != blank %}
+              <p>{{ section.settings.icon_caption_1 }}</p>
+            {% endif %}
+          {% endif %}
+          {% if section.settings.rewards_icon_2 != blank %}
+            <img src="{{ section.settings.rewards_icon_2 | img_url: '400x' }}" alt="{{ section.settings.page_title }}">
+            {% if section.settings.icon_caption_2 != blank %}
+              <p>{{ section.settings.icon_caption_2 }}</p>
+            {% endif %}
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      {{ section.settings.page_content }}
+    </div>
+    <div class="grid__item one-whole form-section">
+      <div class="grid">
+        <div class="form-section-inner">
+          <div class="grid__item form medium-up--five-twelfths">
+            <h4>{{ section.settings.form_heading }}</h4>
+            {%- assign formId = 'RewardsForm' -%}
+            {% form 'contact', id: formId %}
+            {% include 'form-status', form: form, form_id: formId %}
+
+            {% comment %}
+            {%- if form.posted_successfully? -%}
+              <p class="form-message form-message--success" tabindex="-1" data-form-status>
+                {{ 'general.newsletter_form.confirmation' | t }}
+              </p>
+            {%- endif -%}
+            {% endcomment %}
+
+              <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}<span aria-hidden="true">*</span></label>
+              <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}" aria-required="true" required>
+
+              <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="{{ formId }}-email"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                >
+              {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                </span>
+              {%- endif -%}
+
+              <label for="{{ formId }}-address">{{ 'contact.form.address' | t }}<span aria-hidden="true">*</span></label>
+              <input rows="2" type="text" id="{{ formId }}-address" name="contact[{{ 'contact.form.address' | t }}]" value="{% if form[address] %}{{ form[address] }}{% elsif customer %}{{ customer.default_address}}{% endif %}" aria-required="true" required>
+
+              <label for="{{ formId }}-suburb">{{ 'contact.form.suburb' | t }}<span aria-hidden="true">*</span></label>
+              <input type="text" id="{{ formId }}-suburb" name="contact[{{ 'contact.form.suburb' | t }}]" value="{% if form[suburb] %}{{ form[suburb] }}{% endif %}" aria-required="true" required>
+              
+              <label for="{{ formId }}-city">{{ 'contact.form.city' | t }}<span aria-hidden="true">*</span></label>
+              <input type="text" id="{{ formId }}-city" name="contact[{{ 'contact.form.city' | t }}]" value="{% if form[city] %}{{ form[city] }}{% endif %}" aria-required="true" required>
+
+              <label for="{{ formId }}-post_code">{{ 'contact.form.post_code' | t }}<span aria-hidden="true">*</span></label>
+              <input type="text" id="{{ formId }}-post_code" name="contact[{{ 'contact.form.post_code' | t }}]" value="{% if form[post_code] %}{{ form[post_code] }}{% endif %}" aria-required="true" required>
+
+              <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}<span aria-hidden="true">*</span></label>
+              <input type="tel" id="{{ formId }}-phone" name="contact[{{ 'contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}" aria-required="true" required>
+
+              <div class="checkboxes">
+                <label for="{{ formId }}--terms">I agree to Sabato Card Terms and Conditions - </label>
+                <input
+                  type="checkbox"
+                  id="{{ formId }}-terms"
+                  name="contact[terms_and_conditions]"
+                  value="Agreed"
+                  aria-required="true"
+                  required
+                />
+                <br>
+  
+                <label for="{{ formId }}--subscribe">I wish to receive the Sabato newsletter - </label>
+                <input
+                  type="checkbox"
+                  id="{{ formId }}-subscribe"
+                  name="contact[subscribe]"
+                  value="Agreed"
+                />
+              </div>
+
+              <input type="submit" class="btn newsletter__submit" value="{{ 'contact.form.submit' | t }}">
+
+            {% endform %}
+          </div>
+          <div class="grid__item terms medium-up--seven-twelfths">
+            {{ section.settings.terms_and_conditions }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Join Our Team Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "pageheader_image",
+      "label": "Page Header Image"
+    },
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title"
+    },
+    {
+      "type": "richtext",
+      "id": "page_intro",
+      "label": "Page Introduction"
+    },
+    {
+      "type": "image_picker",
+      "id": "rewards_icon",
+      "label": "Rewards Icon",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "icon_caption_1",
+      "label": "Icon Caption"
+    },
+    {
+      "type": "image_picker",
+      "id": "rewards_icon_2",
+      "label": "Rewards Icon Two",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "icon_caption_2",
+      "label": "Icon Caption"
+    },
+    {
+      "type": "richtext",
+      "id": "page_content",
+      "label": "Page Content"
+    },
+    {
+      "type": "header",
+      "content": "Form Section"
+    },
+    {
+      "type": "text",
+      "label": "Form Heading",
+      "id": "form_heading",
+      "default": "Sign Up for a Sabato Customer Account"
+    },
+    {
+      "type": "richtext",
+      "label": "Terms and Conditions",
+      "id": "terms_and_conditions"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,34 @@
+{% for tag in product.tags %}
+  {% if tag contains 'product recipe' %}
+    {% assign recipeTag = tag | remove: 'product recipe: ' %}
+  {% endif %}
+{% endfor %}
+{% assign recipeArticle = articles[{{recipeTag}}] %}
+{% for tag in product.tags %}
+  {% if tag contains 'product recipe' %}
+    <div class="product-recipe-card-wrap page-width-full-mobile">
+      <div class="product-recipe-card-inner">
+          <div class="left">
+            <img src="{{ recipeArticle.image | img_url: '1024x' }}" alt="{{shop.name}} - {{recipeArticle.title}}">
+          </div>
+          <div class="right">
+            <div class="content-wrap">
+              {% include 'heading-topper' %}
+              <a href="{{recipeArticle.url}}">
+                <h2>{{ recipeArticle.title }}</h2>
+                <p>{{ recipeArticle.excerpt_or_content | truncatewords: 55, '...'}}</p>
+                <a class="btn" href="{{ recipeArticle.url }}">Read More</a>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+
+<!-- product recipe: Porcini Barley & Beluga Lentil Soup -->
+<!-- product recipe: recipes/smoked-paprika-cheese-dip -->
+
+
+

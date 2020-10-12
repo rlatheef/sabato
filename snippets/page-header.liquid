@@ -1,0 +1,28 @@
+<div class="page-header-wrap page-width-wide-full-mobile"> 
+  {% if template.name == 'article' %}
+    <div class="page-header-block" style="background-image: url({{ article.image | img_url: '2048x' }});">
+  {% elsif template.name == 'collection' %}
+    <div class="page-header-block" style="background-image: url({{ collection.image | img_url: '2048x' }})">
+  {% elsif template.name == 'page' %}
+    <div class="page-header-block" style="background-image: url({{ section.settings.pageheader_image | img_url: '2048x' }})">
+  {% elsif template.name == 'blog' %}
+    <div class="page-header-block" style="background-image: url({{ section.settings.pageheader_image | img_url: '2048x' }})">
+  {% endif %}
+    <div class="page-header-text-wrap">
+      <div class="text-inner">
+        {% include 'heading-topper-slideshow' %}
+        {% if template.name == 'article' %}
+          <h1>{{ article.title }}</h1>
+          <p>{{ article.published_at | time_tag: format: 'date' }}</p>
+        {% elsif template.name == 'collection' %}
+          <h1>{{ collection.title }}</h1>
+          <p>{{ collection.description }}</p>
+        {% elsif template.name == 'page' %}
+          <h1>{{ page.title }}</h1>
+        {% elsif template.name == 'blog' %}
+          <h1>{{ blog.title }}</h1>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

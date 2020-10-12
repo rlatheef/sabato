@@ -1,0 +1,36 @@
+{% if product.description contains '<h5>'%}
+
+  <div class="product__description" id="productInfo">
+    <div class="">
+      <div class="site-tabs product-tabs">
+
+        <ul class="tabs">
+          {% assign description_parts = product.description | split: "<h5" %}
+          {% for part in description_parts %}
+            {% if part contains "</h5>" %}
+              {% assign remove = part | split: ">" | first | append: ">" %}
+              <li><a href="#tab-{{ forloop.index }}" class="prod-tabs-detail">{{ part | split: "</h5>" | first | strip_html | replace: remove, "" }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        {% assign description_parts = product.description | split: "<h5" %}
+
+
+        {% for part in description_parts %}
+          {% assign fp = part | append: " " | split: "</h5>" | last %}
+          {% assign p = part | append: " " | split: "</h5>" | last | strip_html | replace: "&nbsp;", "" | replace: " ", "" | strip_newlines %}
+
+          {% if p != "" or fp contains "<img " or fp contains "<iframe " %}
+  
+            <div id="tab-{{ forloop.index }}" class="tab-content {% if forloop.index != 2 %} hide-content{% endif %}">
+              {{ part | split: "</h5>" | last | replace: "<div", "<span" | replace: "</div", "</span" }}
+            </div>
+          {% endif %}
+        {% endfor %}
+            
+      </div>
+    </div>
+  </div>
+
+{% endif %}
